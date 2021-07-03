@@ -1,6 +1,7 @@
 <mvc:View controllerName="logaligroup.myinvoices.controller.MainView"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:core='sap.ui.core'>
     <Shell id="shell">
         <App id="app">
             <pages>
@@ -10,8 +11,20 @@
                         <Panel headerText="{i18n>selectionScreen}">
 
                             <Label id="LabelShipName" labelFor="shipName" text="{i18n>shipName}" class="sapUiSmallMargin"/>
-                            <Input id="shipName" width="200px" class="sapUiSmallMarginEnd"/>                            
-
+                            <Input id="shipName" value="{selectionScreen>/shipName}" width="200px" class="sapUiSmallMarginEnd"/>  
+                            <Label id="labelCountry" text="{i18n>country}" class="sapUiSmallMargin"/>
+                            <Select id="slCountry" selectedKey="{selectionScreen>/ContryKey}" forceSelection="false"
+                                                   items="{selectionScreen>/Countries}">
+                                <items>
+                                    <core:Item key="{selectionScreen>key}"
+                                               text="{selectionScreen>text}"/>
+                                </items>                                                   
+                            </Select>
+                            <Button id="btnClearFilters"
+                                    text="{i18n>btnClearFilters}"
+                                    icon="sap-icon://clear-filter"
+                                    press="onClearFilters"
+                                    class="sapUiSmallMarginEnd"/>
                         </Panel>
 
                     </content>
