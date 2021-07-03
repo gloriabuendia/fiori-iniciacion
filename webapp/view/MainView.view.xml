@@ -1,16 +1,24 @@
-<mvc:View
-    controllerName="logaligroup.myinvoices.controller.MainView"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m"
->
-	<Shell id="shell">
-		<App id="app">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content />
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+<mvc:View controllerName="logaligroup.myinvoices.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+
+                        <Panel headerText="{i18n>selectionScreen}">
+
+                            <Label id="LabelShipName" labelFor="shipName" text="{i18n>shipName}" class="sapUiSmallMargin"/>
+                            <Input id="shipName" width="200px" class="sapUiSmallMarginEnd"/>                            
+
+                        </Panel>
+
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
+
+
