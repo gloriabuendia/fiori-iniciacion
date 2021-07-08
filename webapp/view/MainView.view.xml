@@ -20,6 +20,11 @@
                                                text="{selectionScreen>text}"/>
                                 </items>                                                   
                             </Select>
+                            <Button id="btnFilters"
+                                    text="{i18n>btnFilter}"
+                                    icon="sap-icon://filter"
+                                    press="onFilter"
+                                    class="sapUiSmallMarginEnd"/>
                             <Button id="btnClearFilters"
                                     text="{i18n>btnClearFilters}"
                                     icon="sap-icon://clear-filter"

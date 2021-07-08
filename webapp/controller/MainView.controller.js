@@ -14,6 +14,10 @@ sap.ui.define([
                 oJSONModel.loadData("./model/SelectionScreenMenu.json");
                 oView.setModel(oJSONModel, "selectionScreen");
             },
+            
+            onFilter: function (oEvent) {
+                
+            },
 
             onClearFilters: function () {
                 const oModelSelScreen = this.getView().getModel("selectionScreen");
